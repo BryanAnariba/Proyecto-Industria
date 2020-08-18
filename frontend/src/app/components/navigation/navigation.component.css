@@ -1,0 +1,71 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #979904 !important;
+}
+.btn-outline-white {
+  color: #979904 !important;
+  border: 2px solid #979904 !important;
+}
+.btn-outline-white:hover {
+  background-color: #979904 !important;
+  color: #fff !important;
+  border: 2px  solid #fff !important;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: .35s;
+  transition: .35s;
+  border-bottom: 3px solid transparent;
+}
+
+
+.nav-link:hover {
+  border-bottom: 3px solid #2F91DC;
+  color: #979904 !important;
+}
+
+a > img.fh5co-align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#fh5co-features-2 .fh5co-image img {
+  max-width: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+img {
+  border: 0;
+}
