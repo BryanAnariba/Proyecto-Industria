@@ -69,3 +69,12 @@ img {
 img {
   border: 0;
 }
+
+#circle-shopping-cart {
+  margin-top: -6px; margin-left: -7px;
+}
+
+#count-shopping-cart {
+  margin-left: -20px;
+  margin-top: -3px;
+}

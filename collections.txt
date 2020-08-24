@@ -1,0 +1,5 @@
+Colleccion de registro de usuarios -> guarda su perfil y con fotos
+Colleccion de publicaciones -> se guardaran todas la publicaciones de los usuarios
+Colleccion de galera de articulos -> cuando se jalen las publicaciones debe mostrar mediante ngFor todas las fotografias relacionadas a ese articulos
+Colleccion Carrito de compras -> si queda tiempo
+Collecion de bitacoras -> terminar haciento

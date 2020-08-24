@@ -1,0 +1,64 @@
+<header class="view" style="height: 100vh; padding-top: 100px; background: url('../assets/images/fondo.jpg') no-repeat center center fixed; background-size: cover;">
+  <div id="login-component" class="container-fluid  mask rgba-black-strong ">
+  <div class="row" style="margin-top: 100px;">
+    <div class="col-lg-4 col-sm-12 mx-auto text-center items-center ml-auto">
+      <img src="../assets/images/empresario.png" id="avatar" width="180" class="animated jackInTheBox" style="display: initial; margin-bottom: -10px;">
+
+      <div class="card animated zoomIn">
+        <div class="card-header bg-dark">
+          <h4 class="text-center font-weight-bolder" style="color:#FFA000;">
+            Digite Sus Credenciales
+          </h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="userData">
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': emailUser.invalid && (emailUser.dirty || emailUser.touched)}"
+                formControlName="emailUser"
+                type="email"
+                name="emailUser"
+                id="form1"
+                class="form-control input-error">
+              <input type="hidden" name="cosa" value="1">
+              <div class="" *ngIf="emailUser.invalid && (emailUser.dirty || emailUser.touched)" class="text-danger">
+                <span *ngIf="emailUser.errors.required"><strong>Error el campo es obligatorio</strong></span>
+              </div>
+              <label for="form1" [ngClass]="{'label-error': emailUser.invalid && (emailUser.dirty || emailUser.touched)}">
+                Digite su Correo de accceso:
+              </label>
+            </div>
+
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': passUser.invalid && (passUser.dirty || passUser.touched)}"
+                formControlName="passUser"
+                type="password"
+                name="passUser"
+                id="passUser"
+                class="form-control input-error">
+              <input type="hidden" name="cosa" value="1">
+              <div class="" *ngIf="passUser.invalid && (passUser.dirty || passUser.touched)" class="text-danger">
+                <span *ngIf="passUser.errors.required"><strong>Error, el campo es obligatorio</strong></span>
+                <span *ngIf="passUser.errors.pattern"><strong>Error, la clave es obligatoria</strong></span>
+              </div>
+              <label for="form1" [ngClass]="{'label-error': emailUser.invalid && (emailUser.dirty || emailUser.touched)}">
+                Digite su Clave de acceso:
+              </label>
+            </div>
+
+            <div class="form-group">
+              <button type="button" [disabled]="!userData.valid" (click)="signIn()" class="btn btn-amber btn-lg btn-block">
+                Entrar al sistema
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer" style="background-color:#24355C;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>

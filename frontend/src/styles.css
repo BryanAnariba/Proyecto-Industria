@@ -350,8 +350,7 @@ p {
 /*FOOTER*/
 
 .footer {
-
-  padding: 30px;
+  padding: 60px;
   color: #cccccc;
   background-color: #222222;
 }
@@ -386,6 +385,12 @@ p {
   margin: 7px 0 0 0px;
 }
 
+.btn:hover {
+  background-color: #8BC34A !important;
+  color: #575656 !important;
+  border: 1px solid #fff !important;
+  font-weight: bolder;
+}
 
 
 

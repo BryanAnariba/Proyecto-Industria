@@ -1,0 +1,108 @@
+<header class="view" style="height: 130vh;  background: url('../assets/images/fondo.jpg') no-repeat center center fixed; background-size: cover;">
+  <div id="signUp-component" class="container-fluid  mask rgba-black-strong ">
+  <div class="row" style="margin-top: 100px; ">
+    <div class="col-lg-6 col-sm-12 mx-auto text-center items-center ml-auto">
+      <img src="../assets/images/correo-electronico.png" id="avatar" class="animated bounceInLeft" style="display: initial;">
+      <div class="card animated jackInTheBox">
+        <div class="card-header bg-dark">
+          <h4 class="text-center font-weight-bolder" style="color:#FFA000;">
+            Registrese llenando los siguientes campos
+          </h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="user">
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': firstName.invalid && (firstName.dirty || firstName.touched)}"
+                formControlName="firstName"
+                type="text"
+                name="firstName"
+                id="form1"
+                class="form-control input-error">
+                <input type="hidden" name="cosa" value="1">
+                <div class="" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="text-danger">
+                  <span *ngIf="firstName.errors.required"><strong>Error el campo es obligatorio</strong></span>
+                  <span *ngIf="firstName.errors.maxlength"><strong>Error, maximo de caracteres 60</strong></span>
+                  <span *ngIf="firstName.errors.minlength"><strong>Error, minimo de caracteres 5</strong></span>
+                </div>
+                <label for="form1" [ngClass]="{'label-error': firstName.invalid && (firstName.dirty || firstName.touched)}">Digite sus nombres: </label>
+            </div>
+
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': lastName.invalid && (lastName.dirty || lastName.touched)}"
+                formControlName="lastName"
+                type="text"
+                name="lastName"
+                id="lastName"
+                class="form-control input-error">
+              <input type="hidden" name="cosa" value="1">
+              <div class="" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="text-danger">
+                <span *ngIf="lastName.errors.required"><strong>Error el campo es obligatorio</strong></span>
+                <span *ngIf="lastName.errors.maxlength"><strong>Error, maximo de caracteres 60</strong></span>
+                <span *ngIf="lastName.errors.minlength"><strong>Error, minimo de caracteres 5</strong></span>
+              </div>
+              <label for="form1" [ngClass]="{'label-error': lastName.invalid && (lastName.dirty || lastName.touched)}">Digite sus apellidos: </label>
+            </div>
+
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': emailUser.invalid && (emailUser.dirty || emailUser.touched)}"
+                formControlName="emailUser"
+                type="email"
+                name="emailUser"
+                id="emailUser"
+                class="form-control input-error">
+              <input type="hidden" name="cosa" value="1">
+              <div class="" *ngIf="emailUser.invalid && (emailUser.dirty || emailUser.touched)" class="text-danger">
+                <span *ngIf="emailUser.errors.required"><strong>Error el campo es obligatorio</strong></span>
+                <span *ngIf="emailUser.errors.pattern"><strong>Error, Correo No Valido</strong></span>
+              </div>
+              <label for="form1" [ngClass]="{'label-error': emailUser.invalid && (emailUser.dirty || emailUser.touched)}">Digite su email: </label>
+            </div>
+
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': passUser.invalid && (passUser.dirty || passUser.touched)}"
+                formControlName="passUser"
+                type="password"
+                name="passUser"
+                id="passUser"
+                class="form-control input-error">
+              <input type="hidden" name="cosa" value="1">
+              <div class="" *ngIf="passUser.invalid && (passUser.dirty || passUser.touched)" class="text-danger">
+                <span *ngIf="passUser.errors.required"><strong>Error el campo es obligatorio</strong></span>
+                <span *ngIf="passUser.errors.pattern"><strong>Clave debe tener Mínimo ocho caracteres, al menos una letra y un número</strong></span>
+              </div>
+              <label for="form1" [ngClass]="{'label-error': passUser.invalid && (passUser.dirty || passUser.touched)}">Digite su Clave de acceso: </label>
+            </div>
+
+            <div class="md-form">
+              <input
+                [ngClass]="{'input-error': RpassUser.invalid && (RpassUser.dirty || RpassUser.touched)}"
+                formControlName="RpassUser"
+                type="password"
+                name="RpassUser"
+                id="RpassUser"
+                class="form-control input-error">
+              <input type="hidden" name="cosa" value="1">
+              <div class="" *ngIf="RpassUser.invalid && (RpassUser.dirty || RpassUser.touched)" class="text-danger">
+                <span *ngIf="RpassUser.errors.required"><strong>Error el campo es obligatorio</strong></span>
+                <span *ngIf="RpassUser.errors.pattern"><strong>Clave debe tener Mínimo ocho caracteres, al menos una letra y un número</strong></span>
+              </div>
+              <label for="form1" [ngClass]="{'label-error': RpassUser.invalid && (RpassUser.dirty || RpassUser.touched)}">Repita su Clave de acceso: </label>
+            </div>
+
+            <div class="form-group">
+              <button type="button" [disabled]="!user.valid" class="btn btn-amber btn-lg btn-block" (click)="saveNewUser()">Registrarme</button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer" style="background-color:#24355C;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>

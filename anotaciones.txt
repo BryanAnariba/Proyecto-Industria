@@ -1,0 +1,30 @@
+Url Backend Heroku
+https://medivshop-server.herokuapp.com/
+
+Url Frontend Heroku
+https://medshopp.herokuapp.com/
+
+
+Video Demostrativo de una funcionalidad del proyecto en google Drive:
+https://drive.google.com/file/d/1dBHaVRJzkSY7hiDd4wFMirw5_tAZ1s3C/view?usp=sharing
+https://drive.google.com/file/d/1dBHaVRJzkSY7hiDd4wFMirw5_tAZ1s3C/view?usp=sharing
+
+
+Notas:
+    1 - Ingeniero Revise las estadisticas de colaboradores en el repositorio de github, vera que los demas no trabajaron como se deveria.
+    2 - Ingeniero si puede correrlo en su ordenador en local,solo el frontend y el backend se lo agradeceria, me dio problemas una parte de server   
+        en heroky sobre unos Procfiles y estoy solventando eso, la base de datos si esta en la nube y el frontend, solo es el backend
+        pido disculpas por eso.
+
+
+Usuario creado por defecto:
+email -> saariel115@gmail.com
+password -> asdad123
+
+
+------> Si lo va a ejecutar en local 
+        instalar todas las dependencias y instalar nodemon que es una dependencia de desarrollo
+    una ves instalado nodemon ejecutar:
+    
+    Backend -> npm run server
+    Frontend -> ng serve --open
